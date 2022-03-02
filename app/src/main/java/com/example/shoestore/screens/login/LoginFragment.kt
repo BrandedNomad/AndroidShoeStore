@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.LoginFragmentBinding
 
@@ -28,10 +29,20 @@ class LoginFragment: Fragment() {
             false
         )
 
+        //When "need an account?" link is clicked
+        //replaces fragment with signup fragment
         binding.loginSecondaryButton.setOnClickListener{
             replaceFragment(SignupFragment())
         }
 
+        //When "login" button is pressed
+        //navigates to the welcome screen
+        binding.loginPrimaryButton.setOnClickListener{
+
+            findNavController().navigate(LoginContainerFragmentDirections.actionLoginContainerFragmentToWelcomeFragment())
+        }
+
+        //returns binding object
         return binding.root
     }
 
@@ -47,6 +58,7 @@ class LoginFragment: Fragment() {
         var fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.loginFragmentContainer,fragment)
         fragmentTransaction.commit()
+
 
     }
 }

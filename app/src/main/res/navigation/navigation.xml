@@ -4,9 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/loginContainerFragment">
+    app:startDestination="@id/loginContainerDestination">
     <fragment
-        android:id="@+id/loginContainerFragment"
+        android:id="@+id/loginContainerDestination"
         android:name="com.example.shoestore.screens.login.LoginContainerFragment"
-        android:label="LoginContainerFragment" />
+        android:label="LoginContainerFragment">
+        <action
+            android:id="@+id/action_loginContainerFragment_to_welcomeFragment"
+            app:destination="@id/welcomeDestination"
+            app:popUpTo="@id/loginContainerDestination" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeDestination"
+        android:name="com.example.shoestore.screens.welcome.WelcomeFragment"
+        android:label="WelcomeFragment" />
 </navigation>

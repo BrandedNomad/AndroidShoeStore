@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.SignupFragmentBinding
 
@@ -32,6 +33,13 @@ class SignupFragment: Fragment() {
         //replaces fragment with the loginFragment
         binding.signupSecondaryButton.setOnClickListener{
             replaceFragment(LoginFragment())
+        }
+
+        //When "Join" button is pressed
+        //navigates to the welcome screen
+        binding.signupPrimaryButton.setOnClickListener{
+
+            findNavController().navigate(LoginContainerFragmentDirections.actionLoginContainerFragmentToWelcomeFragment())
         }
 
         //return the binding object
