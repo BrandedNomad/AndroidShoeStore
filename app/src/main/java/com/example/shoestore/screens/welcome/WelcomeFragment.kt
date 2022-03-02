@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.WelcomeFragmentBinding
 
@@ -28,6 +29,12 @@ class WelcomeFragment: Fragment() {
             container,
             false
         )
+
+        //When the "next" button is clicked
+        //navigates to the "instructions" fragment
+        binding.welcomeButton.setOnClickListener{
+            findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
+        }
 
         //return the binding object
         return binding.root

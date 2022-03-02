@@ -5,42 +5,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/welcomeFragment"
+        android:id="@+id/instructionsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/welcomeTitle"
+            android:id="@+id/instructionsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
-            android:text="Welcome"
+            android:text="Instructions"
             android:textSize="40dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/welcomeText"
+            app:layout_constraintBottom_toTopOf="@+id/instructionsText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/welcomeText"
+            android:id="@+id/instructionsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is the welcome screen"
-            app:layout_constraintBottom_toTopOf="@+id/welcomeButton"
+            android:text="This is the instructions screen"
+            app:layout_constraintBottom_toTopOf="@+id/instructionsButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcomeTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/instructionsTitle" />
 
         <Button
-            android:id="@+id/welcomeButton"
+            android:id="@+id/instructionsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+            app:layout_constraintTop_toBottomOf="@+id/instructionsText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
