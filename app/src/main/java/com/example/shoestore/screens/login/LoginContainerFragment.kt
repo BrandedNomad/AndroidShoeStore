@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.shoestore.R
-import com.example.shoestore.databinding.LoginFragmentBinding
+import com.example.shoestore.databinding.LoginContainerFragmentBinding
 
-class LoginFragment: Fragment() {
+class LoginContainerFragment: Fragment() {
 
-    lateinit var binding: LoginFragmentBinding
+    lateinit var binding: LoginContainerFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,15 +23,17 @@ class LoginFragment: Fragment() {
         //be used to access views
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.login_fragment,
+            R.layout.login_container_fragment,
             container,
             false
         )
 
-        binding.loginSecondaryButton.setOnClickListener{
-            replaceFragment(SignupFragment())
-        }
+        //Set the fragment to be displayed
+        replaceFragment(LoginFragment())
 
+
+
+        //Return the binding object
         return binding.root
     }
 
@@ -43,7 +45,7 @@ class LoginFragment: Fragment() {
      */
     private fun replaceFragment(fragment:Fragment){
 
-        var fragmentManager = parentFragmentManager
+        var fragmentManager = childFragmentManager
         var fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.loginFragmentContainer,fragment)
         fragmentTransaction.commit()

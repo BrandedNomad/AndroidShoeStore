@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Google Drive/Coding Projects/Android/Udacity/ShoeStore/app/src/main/res/layout/activity_main.xml" value="0.2604166666666667" />
-        <entry key="..\:/Google Drive/Coding Projects/Android/Udacity/ShoeStore/app/src/main/res/layout/login_fragment.xml" value="0.1" />
+        <entry key="..\:/Google Drive/Coding Projects/Android/Udacity/ShoeStore/app/src/main/res/layout/login_container.xml" value="0.264" />
+        <entry key="..\:/Google Drive/Coding Projects/Android/Udacity/ShoeStore/app/src/main/res/layout/login_fragment.xml" value="0.23979148566463945" />
+        <entry key="..\:/Google Drive/Coding Projects/Android/Udacity/ShoeStore/app/src/main/res/layout/signup_fragment.xml" value="0.359375" />
       </map>
     </option>
   </component>

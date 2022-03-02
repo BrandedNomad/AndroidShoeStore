@@ -6,14 +6,22 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
-        android:id="@+id/loginFragment"
+        android:id="@+id/signupFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
 
         <EditText
-            android:id="@+id/loginEmail"
+            android:id="@+id/signupName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:hint="Name"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/signupEmail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -21,7 +29,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/loginPassword"
+            android:id="@+id/signupPassword"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -29,17 +37,17 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/loginPrimaryButton"
+            android:id="@+id/signupPrimaryButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Sign In" />
+            android:text="Join" />
 
         <TextView
-            android:id="@+id/loginSecondaryButton"
+            android:id="@+id/signupSecondaryButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Need an account?"
+            android:text="Already have an account?"
             android:gravity="center"/>
 
     </LinearLayout>
