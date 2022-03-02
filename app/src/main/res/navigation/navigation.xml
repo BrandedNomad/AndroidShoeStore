@@ -26,5 +26,14 @@
     <fragment
         android:id="@+id/instructionsDestination"
         android:name="com.example.shoestore.screens.instructions.InstructionsFragment"
-        android:label="InstructionsFragment" />
+        android:label="InstructionsFragment" >
+        <action
+            android:id="@+id/action_instructionsDestination_to_shoeListDestination"
+            app:destination="@id/shoeListDestination"
+            app:popUpTo="@id/loginContainerDestination" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListDestination"
+        android:name="com.example.shoestore.screens.shoelist.ShoeListFragment"
+        android:label="ShoeListFragment" />
 </navigation>

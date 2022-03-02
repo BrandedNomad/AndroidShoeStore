@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.InstructionsFragmentBinding
 
@@ -28,6 +29,13 @@ class InstructionsFragment: Fragment() {
             false
         )
 
+        //When "next" button is pressed
+        //navigates to "shoe list" fragment
+        binding.instructionsButton.setOnClickListener{
+            findNavController().navigate(InstructionsFragmentDirections.actionInstructionsDestinationToShoeListDestination())
+        }
+
+        //return binding object
         return binding.root
     }
 }
