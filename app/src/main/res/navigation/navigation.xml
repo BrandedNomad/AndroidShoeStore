@@ -35,5 +35,18 @@
     <fragment
         android:id="@+id/shoeListDestination"
         android:name="com.example.shoestore.screens.shoelist.ShoeListFragment"
-        android:label="ShoeListFragment" />
+        android:label="ShoeListFragment" >
+        <action
+            android:id="@+id/action_shoeListDestination_to_detailsDestination"
+            app:destination="@id/detailsDestination"
+            app:popUpTo="@id/loginContainerDestination" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsDestination"
+        android:name="com.example.shoestore.screens.details.DetailsFragment"
+        android:label="DetailsFragment" >
+        <action
+            android:id="@+id/action_detailsDestination_to_shoeListDestination"
+            app:destination="@id/shoeListDestination" />
+    </fragment>
 </navigation>

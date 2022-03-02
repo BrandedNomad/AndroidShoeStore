@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.ShoelistFragmentBinding
 
@@ -29,7 +30,7 @@ class ShoeListFragment: Fragment() {
         )
 
         binding.shoelistFab.setOnClickListener{
-            //TODO
+            findNavController().navigate(ShoeListFragmentDirections.actionShoeListDestinationToDetailsDestination())
         }
 
         return binding.root
