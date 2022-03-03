@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'androidx.navigation.safeargs'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -61,4 +62,6 @@ dependencies {
 
     //Material
     implementation 'com.google.android.material:material:1.5.0'
+
+
 }

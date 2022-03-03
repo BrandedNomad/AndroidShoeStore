@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.DetailsFragmentBinding
+import com.example.shoestore.models.Shoe
 
 class DetailsFragment: Fragment() {
 
@@ -32,15 +33,29 @@ class DetailsFragment: Fragment() {
         //When "Save" button is pressed
         //navigate back to the details view
         binding.detailsPrimaryButton.setOnClickListener{
-            findNavController().navigate(DetailsFragmentDirections.actionDetailsDestinationToShoeListDestination())
+            val name = if(binding.detailsShoeName.text.toString() != "") binding.detailsShoeName.text.toString() else null
+            val size = binding.detailsShoeSize.text.toString().toDoubleOrNull()
+            val company = if(binding.detailsCompanyName.text.toString() != "") binding.detailsCompanyName.text.toString() else null
+            val description = if(binding.detailsDescription.text.toString() != "") binding.detailsDescription.text.toString() else null
+
+            if(name == null || size == null || company == null || description == null){
+
+            } else {
+                val shoe:Shoe = Shoe(name,size,company,description)
+                findNavController().navigate(DetailsFragmentDirections.actionDetailsDestinationToShoeListDestination(shoe))
+            }
+
+
         }
 
         //When "Cancel" button is pressed
         //navigate back to the details view
         binding.detailsSecondaryButton.setOnClickListener{
-            findNavController().navigate(DetailsFragmentDirections.actionDetailsDestinationToShoeListDestination())
+            findNavController().navigate(DetailsFragmentDirections.actionDetailsDestinationToShoeListDestination(null))
         }
 
         return binding.root
     }
+
+
 }

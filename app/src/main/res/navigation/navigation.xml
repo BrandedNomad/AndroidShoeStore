@@ -36,6 +36,11 @@
         android:id="@+id/shoeListDestination"
         android:name="com.example.shoestore.screens.shoelist.ShoeListFragment"
         android:label="Shoes">
+        <argument
+            android:name="shoe"
+            app:argType="com.example.shoestore.models.Shoe"
+            app:nullable="true"
+            />
         <action
             android:id="@+id/action_shoeListDestination_to_detailsDestination"
             app:destination="@id/detailsDestination"

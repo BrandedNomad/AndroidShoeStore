@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         //connect to action bar
         NavigationUI.setupActionBarWithNavController(this,navController)
 
-        //Configure
+        //Configure the app bar
         appBarConfiguration = AppBarConfiguration(navController.graph)
 
     }

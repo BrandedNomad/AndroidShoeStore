@@ -32,7 +32,7 @@ class InstructionsFragment: Fragment() {
         //When "next" button is pressed
         //navigates to "shoe list" fragment
         binding.instructionsButton.setOnClickListener{
-            findNavController().navigate(InstructionsFragmentDirections.actionInstructionsDestinationToShoeListDestination())
+            findNavController().navigate(InstructionsFragmentDirections.actionInstructionsDestinationToShoeListDestination(null))
         }
 
         //return binding object
