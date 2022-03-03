@@ -12,10 +12,21 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <TextView
+            android:id="@+id/signupTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Create New Account"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textAlignment="center"/>
+
         <EditText
             android:id="@+id/signupName"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:hint="Name"
             android:inputType="textEmailAddress" />
@@ -24,6 +35,7 @@
             android:id="@+id/signupEmail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:hint="Email"
             android:inputType="textEmailAddress" />
@@ -32,6 +44,7 @@
             android:id="@+id/signupPassword"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:hint="Password"
             android:inputType="textPassword" />
@@ -40,6 +53,7 @@
             android:id="@+id/signupPrimaryButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:text="Join" />
 
@@ -47,6 +61,7 @@
             android:id="@+id/signupSecondaryButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Already have an account?"
             android:gravity="center"/>
 

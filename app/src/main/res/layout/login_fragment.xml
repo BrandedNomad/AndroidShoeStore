@@ -12,10 +12,21 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <TextView
+            android:id="@+id/detailsTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Sign In to Your Account"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textAlignment="center"/>
+
         <EditText
             android:id="@+id/loginEmail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:hint="Email"
             android:inputType="textEmailAddress" />
@@ -24,6 +35,7 @@
             android:id="@+id/loginPassword"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:hint="Password"
             android:inputType="textPassword" />
@@ -32,6 +44,7 @@
             android:id="@+id/loginPrimaryButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:text="Sign In" />
 
@@ -39,6 +52,7 @@
             android:id="@+id/loginSecondaryButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Need an account?"
             android:gravity="center"/>
 
